@@ -5,6 +5,8 @@
     <title>Welcome to Example.com</title>
 </head>
 <body>
+    <img src="{{ asset('images/welcome.jpg') }}" alt="">
+    
     <h5>Hello, {{ $user->name }}</h5>
 
     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, dicta.</div>
