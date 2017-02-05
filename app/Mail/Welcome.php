@@ -33,6 +33,7 @@ class Welcome extends Mailable
     public function build()
     {
         return $this->view('emails.welcome')
+            ->text('emails.welcome_plain')
             ->to($this->user->email, $this->user->name)
             ->subject('Welcome to Example.com')
             ->from('members@example.com', 'Example.com members')
