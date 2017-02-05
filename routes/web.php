@@ -23,6 +23,5 @@ Route::get('/test', function()
 {
     $user = App\User::find(1);
 
-    \Mail::to($user->email)
-        ->send(new App\Mail\Welcome($user));
+    \Mail::send(new App\Mail\Welcome($user));
 });

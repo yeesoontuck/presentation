@@ -32,6 +32,10 @@ class Welcome extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.welcome');
+        return $this->view('emails.welcome')
+            ->to($this->user->email, $this->user->name)
+            ->subject('Welcome to Example.com')
+            ->from('members@example.com', 'Example.com members')
+            ->bcc('support@example.com');
     }
 }
