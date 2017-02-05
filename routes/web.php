@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/test', function()
+{
+    $user = App\User::find(1);
+
+    \Mail::to($user->email)
+        ->send(new App\Mail\Welcome($user));
+});
