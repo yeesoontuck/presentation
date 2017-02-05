@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
 
-        Mail::send(new Welcome($user));
+        Mail::queue(new Welcome($user));
 
         return $user;
     }
