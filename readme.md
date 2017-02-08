@@ -16,3 +16,11 @@ This repository contains a bare-bones Laravel 5.3 installation, with branches fo
 - plain_text
 
 
+### Installation
+
+1. clone this repository
+2. composer install
+3. copy .env.example to .env
+3. php artisan key:generate
+4. configure .env for your database
+5. php artisan migrate
